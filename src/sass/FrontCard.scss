@@ -1,0 +1,49 @@
+@import "color.scss";
+
+.frontCard {
+  background: url("../assets/bg-card-front.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  justify-content: space-between;
+  margin-top: 20rem;
+  margin: auto;
+  min-height: 20vh;
+  padding: 1.5rem;
+  position: relative;
+  width: 250px;
+
+  .logo {
+    width: 4.5rem;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1.5rem;
+
+    .cardNumber {
+      color: $light-grayish-violet;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      word-spacing: 4px;
+    }
+
+    div {
+      display: flex;
+      justify-content: space-between;
+
+      .cardHolderName,
+      .date {
+        color: $light-grayish-violet;
+        letter-spacing: 0.6px;
+        opacity: 0.8;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

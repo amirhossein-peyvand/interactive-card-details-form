@@ -1,5 +1,11 @@
+import FrontCard from "./components/FrontCard";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <FrontCard />
+    </>
+  );
 }
 
 export default App;

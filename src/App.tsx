@@ -1,9 +1,9 @@
-import Form from "./components/Form";
+import Completed from "./components/Completed";
 
 function App() {
   return (
     <>
-      <Form />
+      <Completed />
     </>
   );
 }

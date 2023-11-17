@@ -99,7 +99,6 @@ form {
         color: $very-dark-violet;
         font-size: 1.2rem;
         font-weight: 600;
-        letter-spacing: 1px;
         outline: none;
         padding: 1rem;
         width: 100%;
@@ -135,5 +134,112 @@ form {
 
   .confirmBtn:hover {
     opacity: 0.9;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .form {
+    .formGroup {
+      label {
+        font-size: 1.1rem;
+        word-spacing: 2px;
+      }
+    }
+
+    .lastOne {
+      .left {
+        label {
+          font-size: 1.1rem;
+        }
+      }
+
+      .right {
+        label {
+          font-size: 1.1rem;
+        }
+      }
+    }
+
+    .confirmBtn {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .form {
+    .formGroup {
+      label {
+        font-size: 1.3rem;
+        word-spacing: 2px;
+      }
+    }
+
+    .lastOne {
+      .left {
+        label {
+          font-size: 1.3rem;
+        }
+      }
+
+      .right {
+        label {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .confirmBtn {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .form {
+    .formGroup {
+      label {
+        font-size: 1.5rem;
+        word-spacing: 2px;
+      }
+
+      input {
+        font-size: 1.4rem;
+      }
+
+      input::placeholder {
+        font-size: 1.4rem;
+      }
+    }
+
+    .lastOne {
+      .left {
+        label {
+          font-size: 1.5rem;
+        }
+
+        div {
+          input,
+          input::placeholder {
+            font-size: 1.4rem;
+          }
+        }
+      }
+
+      .right {
+        label {
+          font-size: 1.5rem;
+        }
+
+        input,
+        input::placeholder {
+          font-size: 1.4rem;
+        }
+      }
+    }
+
+    .confirmBtn {
+      font-size: 1.5rem;
+    }
   }
 }

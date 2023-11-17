@@ -17,7 +17,6 @@
     .cardsContainer {
       position: relative;
       width: 90%;
-      border: 2px solid red;
       max-width: 60rem;
       height: 22vh;
       max-height: 22vh;
@@ -32,6 +31,16 @@
         right: 0;
         top: 0;
       }
+    }
+  }
+
+  .bottom {
+    padding-top: 10rem;
+
+    .formContainer {
+      margin: auto;
+      width: 90%;
+      max-width: 60rem;
     }
   }
 }
@@ -72,6 +81,19 @@
       .cardsContainer {
         .frontCard {
           bottom: -30%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .mobile {
+    .bottom {
+      .formContainer {
+        margin-top: 4rem;
+        .form {
+          row-gap: 2rem;
         }
       }
     }

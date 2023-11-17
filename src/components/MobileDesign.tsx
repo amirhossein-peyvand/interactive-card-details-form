@@ -1,5 +1,6 @@
 import "../sass/MobileDesign.scss";
 import BackCard from "./BackCard";
+import Form from "./Form";
 import FrontCard from "./FrontCard";
 
 const MobileDesign = () => {
@@ -11,7 +12,11 @@ const MobileDesign = () => {
           <BackCard />
         </div>
       </section>
-      <section className="bottom"></section>
+      <section className="bottom">
+        <div className="formContainer">
+          <Form />
+        </div>
+      </section>
     </div>
   );
 };

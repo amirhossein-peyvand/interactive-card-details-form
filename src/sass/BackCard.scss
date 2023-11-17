@@ -1,22 +1,48 @@
 @import "color.scss";
 
 .backCard {
-  background: url("../assets/bg-card-back.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 5px;
-  height: 150px;
+  overflow: hidden;
   min-height: 20vh;
   position: relative;
-  width: 250px;
+  width: 200px;
+
+  img {
+    width: 100%;
+  }
 
   .cvv2 {
     color: $white;
-    left: 82%;
+    font-size: 1rem;
     letter-spacing: 1px;
     opacity: 0.8;
     position: absolute;
-    top: 45%;
+    right: 12%;
+    top: 34%;
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .backCard {
+    width: 22rem;
+
+    .cvv2 {
+      top: 37%;
+    }
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .backCard {
+    width: 26rem;
+
+    .cvv2 {
+      top: 37%;
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .backCard {
+    width: 33rem;
   }
 }

@@ -1,9 +1,9 @@
-import Completed from "./components/Completed";
+import MobileDesign from "./components/MobileDesign";
 
 function App() {
   return (
     <>
-      <Completed />
+      <MobileDesign />
     </>
   );
 }

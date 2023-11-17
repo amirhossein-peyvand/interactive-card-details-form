@@ -1,0 +1,79 @@
+@import "color.scss";
+
+.mobile {
+  min-width: 260px;
+
+  .top {
+    background: url("../assets/bg-main-mobile.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    height: 35vh;
+    display: flex;
+    align-items: flex-end;
+
+    .cardsContainer {
+      position: relative;
+      width: 90%;
+      border: 2px solid red;
+      max-width: 60rem;
+      height: 22vh;
+      max-height: 22vh;
+
+      .frontCard {
+        position: absolute;
+        bottom: -35%;
+      }
+
+      .backCard {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 390px) {
+  .mobile {
+    .top {
+      .cardsContainer {
+        .frontCard {
+          bottom: -10%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 490px) {
+  .mobile {
+    .top {
+      .cardsContainer {
+        .frontCard {
+          bottom: -25%;
+        }
+
+        .backCard {
+          .cvv2 {
+            top: 45%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .mobile {
+    .top {
+      .cardsContainer {
+        .frontCard {
+          bottom: -30%;
+        }
+      }
+    }
+  }
+}

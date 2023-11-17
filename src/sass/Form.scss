@@ -6,6 +6,10 @@ form {
   min-width: 200px;
   row-gap: 1.5rem;
 
+  .err {
+    color: $red;
+  }
+
   .formGroup {
     display: flex;
     flex-direction: column;
@@ -61,15 +65,52 @@ form {
         column-gap: 0.5rem;
         display: flex;
 
+        div {
+          input {
+            border-radius: 6px;
+            border: 1px solid $light-grayish-violet;
+            color: $very-dark-violet;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.2rem;
+            outline: none;
+            padding: 1rem;
+            width: 100%;
+          }
+
+          input::placeholder {
+            color: $light-grayish-violet;
+            font-size: 1.2rem;
+            font-weight: 600;
+          }
+
+          input:focus {
+            background: linear-gradient(#fff, #fff) padding-box,
+              linear-gradient(to right, rgb(100, 72, 254), rgb(96, 5, 148))
+                border-box;
+            border: 1px solid transparent;
+          }
+        }
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.8rem;
+      width: 50%;
+
+      & > div {
         input {
           border-radius: 6px;
           border: 1px solid $light-grayish-violet;
           color: $very-dark-violet;
           font-size: 1.2rem;
           font-weight: 600;
+          margin-bottom: 0.2rem;
           outline: none;
           padding: 1rem;
-          width: 50%;
+          width: 100%;
         }
 
         input::placeholder {
@@ -84,37 +125,6 @@ form {
               border-box;
           border: 1px solid transparent;
         }
-      }
-    }
-
-    .right {
-      display: flex;
-      flex-direction: column;
-      row-gap: 0.8rem;
-      width: 50%;
-
-      input {
-        border-radius: 6px;
-        border: 1px solid $light-grayish-violet;
-        color: $very-dark-violet;
-        font-size: 1.2rem;
-        font-weight: 600;
-        outline: none;
-        padding: 1rem;
-        width: 100%;
-      }
-
-      input::placeholder {
-        color: $light-grayish-violet;
-        font-size: 1.2rem;
-        font-weight: 600;
-      }
-
-      input:focus {
-        background: linear-gradient(#fff, #fff) padding-box,
-          linear-gradient(to right, rgb(100, 72, 254), rgb(96, 5, 148))
-            border-box;
-        border: 1px solid transparent;
       }
     }
   }

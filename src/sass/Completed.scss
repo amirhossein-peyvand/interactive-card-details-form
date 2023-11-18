@@ -6,7 +6,8 @@
   flex-direction: column;
   row-gap: 3rem;
   text-align: center;
-  width: clamp(15rem, 90%, 60rem);
+  // width: clamp(15rem, 90%, 60rem);
+  min-width: 200px;
 
   img {
     width: 6rem;

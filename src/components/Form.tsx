@@ -3,6 +3,10 @@ import { useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+interface Props {
+  onSetCompleted: () => void;
+}
+
 const schema = z.object({
   cardHolder: z
     .string()
@@ -24,16 +28,15 @@ const schema = z.object({
     .min(100, { message: "cvc numbers should be more than or equal to 100" })
     .max(999, { message: "cvc numbers should be less than or equal to 999" }),
 });
-
 type FormData = z.infer<typeof schema>;
 
-const Form = () => {
+const Form = ({ onSetCompleted }: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
-  const onSubmit = () => {};
+  const onSubmit = () => onSetCompleted();
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>

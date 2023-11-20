@@ -1,14 +1,27 @@
 import "../sass/Form.scss";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 interface Props {
   onSetCompleted: () => void;
+  onSetCardInfo: ({
+    cardHolderName,
+    cardNumber,
+    cvc,
+    mm,
+    yy,
+  }: {
+    cardHolderName: string;
+    cardNumber: string;
+    cvc: string;
+    mm: string;
+    yy: string;
+  }) => void;
 }
 
 const schema = z.object({
-  cardHolder: z
+  cardHolderName: z
     .string()
     .min(5, { message: "Must be at least 5 characters" })
     .max(30, { message: "Must be at most 30 characters" }),
@@ -30,27 +43,36 @@ const schema = z.object({
 });
 type FormData = z.infer<typeof schema>;
 
-const Form = ({ onSetCompleted }: Props) => {
+const Form = ({ onSetCompleted, onSetCardInfo }: Props) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormData>({ resolver: zodResolver(schema) });
-  const onSubmit = () => onSetCompleted();
+  const onSubmit = (event: FieldValues) => {
+    onSetCompleted();
+    onSetCardInfo({
+      cardHolderName: event.cardHolderName,
+      cardNumber: event.cardNumber,
+      cvc: event.cvc,
+      mm: event.mm,
+      yy: event.yy,
+    });
+  };
 
   return (
     <form className="form" onSubmit={handleSubmit(onSubmit)}>
       <div className="formGroup">
         <label htmlFor="cardholder">CARDHOLDER NAME</label>
         <input
-          {...register("cardHolder")}
+          {...register("cardHolderName")}
           type="text"
           id="cardholder"
           placeholder="e.g. Jane Appleseed"
           required
         />
-        {errors.cardHolder && (
-          <p className="err">{errors.cardHolder.message}</p>
+        {errors.cardHolderName && (
+          <p className="err">{errors.cardHolderName.message}</p>
         )}
       </div>
       <div className="formGroup">

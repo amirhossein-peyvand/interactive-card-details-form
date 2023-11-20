@@ -33,11 +33,12 @@
 
       .frontCard {
         align-self: flex-start;
+        box-shadow: 0 0 20px 0 $very-dark-violet;
       }
 
       .backCard {
         align-self: flex-end;
-
+        box-shadow: 0 0 20px 0 hsl(278, 15%, 31%);
         .cvv2 {
           top: 45%;
         }
